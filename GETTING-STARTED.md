@@ -200,4 +200,4 @@ make esp32      # ESP32 firmware
 make jetson     # Jetson edge node
 ```
 
-See the [Makefile](./Makefile) for all available targets.
+See the repository Makefile for all available targets.

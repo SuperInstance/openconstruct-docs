@@ -1898,4 +1898,4 @@ pub type AssetRef = String;
 
 ---
 
-*This document covers every architectural layer of OpenConstruct. For installation and usage, see [README.md](README.md). For the public API surface, see [API.md](API.md). For design rationale, see [DESIGN.md](DESIGN.md).*
+*This document covers every architectural layer of OpenConstruct. For installation and usage, see [README.md](README.md). For the public API surface, see [MODULE-REFERENCE.md](MODULE-REFERENCE.md). For design rationale, see [DESIGN-PHILOSOPHY.md](DESIGN-PHILOSOPHY.md).*

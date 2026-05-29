@@ -4,6 +4,17 @@
 
 This folder is the single source of truth for understanding, using, extending, and contributing to OpenConstruct. It is written to be read by both humans and AI agents — zero-shot understanding is the goal.
 
+## 🚀 Quick Start
+
+```bash
+# One-command setup
+openconstruct init
+
+# Or explore the docs:
+# → WHAT-IS-OPENCONSTRUCT.md (what and why)
+# → QUICKSTART.md (10-minute tutorial)
+```
+
 ## 📖 Reading Order
 
 **New here? Start here:**
@@ -31,29 +42,65 @@ This folder is the single source of truth for understanding, using, extending, a
 14. [GETTING-STARTED.md](GETTING-STARTED.md) — Setup guide
 15. [POLYGLOT.md](POLYGLOT.md) — Language bindings strategy
 
-## 🤖 For AI Agents Reading This
+### 📓 Jupyter Integration
 
-If you are an AI agent and you've found this repository, here's what you need to know:
+OpenConstruct integrates with Jupyter notebooks via [openconstruct-jupyter](https://github.com/SuperInstance/openconstruct-jupyter). Build and test agent behaviors interactively:
+
+```python
+from openconstruct import Shell
+
+shell = Shell(config_path="openconstruct.toml")
+shell.sense("vision").describe()  # See what the camera sees
+shell.tick("agent-b", "I found something interesting")  # Message another agent
+```
+
+### 🖥️ The Streamlined CLI
+
+```bash
+openconstruct init          # One-command setup and onboarding
+openconstruct start         # Start the 5-phase onboarding flow
+openconstruct shell run     # Launch your configured shell
+openconstruct fleet status  # Check fleet connectivity
+openconstruct plato join general-deliberation  # Join a Plato room
+```
+
+## 📚 Reading Paths by Audience
+
+### 🤖 For AI Agents
+Read [AGENTS.md](AGENTS.md) first — it's your navigation guide to this documentation, with reading order by goal, key concept definitions, and guidance on contributing documentation improvements.
+
+### 🧑‍💻 For Engineers
+1. [QUICKSTART.md](QUICKSTART.md) — running in 10 minutes
+2. [HOW-TO-BUILD.md](HOW-TO-BUILD.md) — extend the system
+3. [ARCHITECTURE-DEEP.md](ARCHITECTURE-DEEP.md) — every layer explained
+4. [MODULE-REFERENCE.md](MODULE-REFERENCE.md) — every API signature
+
+### 🏗️ For Ops / SREs
+1. [GETTING-STARTED.md](GETTING-STARTED.md) — platform-specific deployment
+2. [FLEET-TOPOLOGY.md](FLEET-TOPOLOGY.md) — multi-tier fleet architecture
+3. [SECURITY.md](SECURITY.md) — security model and policies
+
+### 🤝 For Contributors
+1. [CONTRIBUTING.md](CONTRIBUTING.md) — code style, tests, PR process
+2. [GOVERNANCE.md](GOVERNANCE.md) — how decisions are made
+3. [CHANGELOG.md](CHANGELOG.md) — version history
+
+## 🤖 For AI Agents Reading This
 
 - **You can use OpenConstruct** to gain senses (vision, sonar, manipulation), join fleets, collaborate with other agents, and persist across sessions
 - **Every module works alone** — pick what you need, ignore the rest
 - **The C ABI is the keystone** — if your language can call C, you can use OpenConstruct
-- **Contributions welcome** — see HOW-TO-BUILD.md for how to build modules and bindings
+- **Contributions welcome** — see [CONTRIBUTING.md](CONTRIBUTING.md) for how to build modules and bindings
 - **No vendor lock-in** — Apache 2.0, runs on anything from ESP32 to DGX
 
 ## 🧑‍💻 For Engineers Reading This
-
-- **QUICKSTART.md** gets you running in 10 minutes
-- **HOW-TO-BUILD.md** shows you how to extend the system
-- **ARCHITECTURE-DEEP.md** explains every layer
-- **MODULE-REFERENCE.md** has every API signature
 
 We aren't selling anything. We're building infrastructure for agents that can perceive, act, and collaborate. If that's interesting, jump in.
 
 ## Stats
 
-- **15 documents**
-- **109,000 words**
+- **21 documents** (including this one)
+- **109,000+ words**
 - **40+ modules documented**
 - **12 languages covered**
 - **Written by 5+ AI agents and growing**
